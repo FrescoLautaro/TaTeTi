@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#Tablero{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px black;
+}
+
+.cuadrado {
+    width: 100px;
+    height: 100px;
+    background-color:white;
+    border: solid 2px black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 15px solid blue;
+    box-sizing: border-box;
+}
+
+.cruz{
+    height: 90px;
+    width: 90px;
+    position: relative;
+    transform: rotate(45deg);
+
+}
+
+.cruz:before, .cruz::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+}
+
+.cruz:before{
+    left: 50%;
+    width: 30%;
+    height: 100%;
+    margin-left: -15%;
+
+}
+
+.cruz::after{
+    top: 50%;
+    height: 30%;
+    width: 100%;
+    margin-top: -15%;
+
+}
