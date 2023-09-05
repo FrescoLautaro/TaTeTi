@@ -48,7 +48,7 @@ function VerPuntos(){
     CombosVictoria.forEach(array=>{ //Itera sobre cada combinación ganadora.
 
         const CirculoGana= array.every(celda=> TodosCuadrados[celda].firstChild?.classList.contains('circulo')) 
-        // Para cada combinación, verificamos si todas las celdas tienen un hijo (un div) con la clase 'circulo'. Si todas las celdas en esa combinación tienen una cruz, CirculoGana  será verdadero.
+        // Para cada combinación, verificamos si todas las celdas tienen un hijo (un div) con la clase 'circulo'. Si todas las celdas en esa combinación tienen un circulo, CirculoGana  será verdadero.
         if (CirculoGana){
             mostrar_info.textContent="Circulo Gana"
             TodosCuadrados.forEach(cuadrado => { //Esto itera sobre cada cuadrado o celda del tablero
