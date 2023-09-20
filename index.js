@@ -9,6 +9,7 @@ function crearTablero() {
         const ElementCelda = document.createElement('div'); //Creamos un nuevo elemento del tipo div y lo asignamos a la constante "ElementCelda". Este div representará una celda individual en nuestro tablero.
         ElementCelda.setAttribute('data-value', '');
         //Establecemos un atributo llamado "data-value" para el elemento "ElementCelda" y lo inicializamos con una cadena vacía. 
+        //Este atributo nos puede ayudar a rastrear el estado de esta celda (si está vacía, tiene un círculo o una cruz) más adelante en el juego.
         ElementCelda.classList.add('cuadrado');
         //Añadimos la clase "cuadrado" al elemento "ElementCelda". Esto es para poder aplicar estilos CSS a todas las celdas usando esta clase. 
         ElementCelda.addEventListener('click', addTurno);
