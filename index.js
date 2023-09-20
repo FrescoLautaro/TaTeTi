@@ -27,7 +27,12 @@ function addTurno(e) { //Esta función se invoca cada vez que se hace clic en un
     //En este contexto, es la celda individual en la que el jugador hizo clic.
     if (celda.getAttribute('data-value') === '') { //Verificamos si la celda está vacía, si lo esta, se puede jugar en ella
         celda.setAttribute('data-value', turno); //Marcamos la celda con el turno actual
-        turno = turno === "circulo" ? "cruz" : "circulo"; //Cambiamos el turno al siguiente jugador. Si el turno actual es "circulo", lo cambiamos a "cruz", y viceversa. 
+        if (turno=="circulo"){
+            turno="cruz";
+        }
+        else{
+            turno="circulo";
+        }
         mostrar_info.textContent = "Es el turno de " + turno; 
         celda.removeEventListener("click", addTurno); 
         VerPuntos(); 
